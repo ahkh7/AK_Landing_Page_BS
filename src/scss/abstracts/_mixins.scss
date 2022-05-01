@@ -1,0 +1,134 @@
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// !  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  Use  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@use "../vendors/__vendors-dir" as *;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// !  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  Gradient  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@mixin ak_bg_gradient_1 {
+    background-image: linear-gradient(to right top, #04285e, #082454, #0b214b, #0d1d42, #0e1a39, #292148, #452754, #622c5b, #aa3b61, #e35e4f, #fc982c, #efdc05);
+    background-attachment: fixed;
+    background-size: 200% 200%;
+    animation: ak_bg_gradient_1 15s ease infinite;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// !  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  Center  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@mixin ak_center_flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+// @mixin ak_center_position{
+//     position: absolute;
+//     left: 50%;
+//     top:50%;
+//     margin-left: calc(-50%*width);
+//     margin-top: calc(-50%*height);
+// }
+
+@mixin ak_center_transform{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// !  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  Typography  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// !  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  inputs  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@mixin ak_search_input_1 ($width, $height) {
+    width: $width;
+    height: $height;
+    padding-left: 0.5rem;
+    outline: none;
+    border-radius: 0.6rem;
+    border: 0;
+    outline: 0;
+    background:none;
+    transition: width 0.4s linear;
+    background-color: white;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// !  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  Buttons  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@mixin ak_btns_1 ($size, $color, $bgcolor){
+    white-space: nowrap;
+    font-size: $size;
+    background-color: $bgcolor;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 0.1rem;
+    box-shadow: 0 0.15rem 0.3rem 0px #00000038;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    a{
+        color: $color;
+        text-decoration: none;
+        &:hover{
+            text-decoration: none;
+            color: $color;
+        }
+    }
+}
+@mixin form_submit_1($font, $width, $height){
+    font-size: $font;
+    width: $width;
+    height: $height;
+    color: yellow ;
+    font-weight: bold;
+    border-radius: 0.8rem;
+    border: 1px solid #00000085;
+    background-color: #00000085;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// !  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  Gradients  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@mixin ak_gradient_1 {
+    background: linear-gradient(to right, rgba($primary, 0.95), rgba($secondary, 0.95));
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// !  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  Other  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@mixin ak_links_1($color1, $color2){
+    // cursor: pointer;
+    color: $color1;
+    text-decoration: none;
+    // margin: 0 1rem;
+    &:hover{
+        text-decoration: none;
+        color: $color2;
+        font-weight: bold;
+    }
+}
+
+@mixin ak_headline_1 ($color) {
+    &::before {
+        content: "";
+        background-color: $color;
+        width: 10rem;
+        height: 0.2rem;
+        display: block;
+        margin: 0 auto;
+    }
+    &::after {
+        content: "";
+        background-color: $color;
+        width: 2rem;
+        height: 0.4rem;
+        display: block;
+        margin: 0 auto;
+        padding-top: 0.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@mixin ak_transition_1 {
+    transition-duration: 1s;
+    transition-property: all;
+}
+

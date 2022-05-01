@@ -1,0 +1,336 @@
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// !  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  Use  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@use "../base/__base-dir" as *;
+@use "../vendors/__vendors-dir" as *;
+@use "../abstracts/__abstracts-dir"  as *;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// !  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  Intro Section  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+.pg2_intro{
+    padding-top: 9rem;
+    @include media-breakpoint-down(md){
+        flex-direction: column;
+    }    
+    @include media-breakpoint-down(lg){
+        padding-top: 6rem;
+    }    
+    &_left{
+        &_display{
+            @include media-breakpoint-down(md) {
+                text-align: center;
+            }
+        }
+        &_btns{
+            @include media-breakpoint-down(sm) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+    &_right{
+        &_video_box{
+            position: relative;
+            a {
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+                div{
+                    @include ak_center_transform;
+                    span{
+                        i{
+                            font-size: 6rem;
+                            color: $ak_glightbox_color_1;
+                        }
+                    }
+                }
+            }
+            &_border_animation{
+                position: absolute;
+                left: 0;
+                width: 6rem;
+                height: 6rem;
+                border: 0.55rem solid white;
+                border-radius: 50%;
+                animation: ak_animation_pulse_border 1.5s linear infinite;
+                &_border_1{
+                    animation-delay: 1s;
+                }
+                &_border_2{
+                    animation-delay: 1.7s;
+                }
+            }
+        }
+    }
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// !  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  About  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+.pg2_about{
+    padding-top: 5rem;
+    &_header{
+        color: white;
+        font-weight: bold;
+        div{
+            @include ak_headline_1($ak_headline_color_1);
+        }
+    }
+    &_content{
+        display: flex;
+        justify-content: center;
+        &_right{
+            color: white;
+            height: 100%;
+            padding-bottom: 0;
+            li{
+                span{
+                    text-decoration: underline;
+                    font-weight: bold;
+                    color: #ffc107;
+                }
+            }
+        }
+        &_center{
+            margin: 0rem 2rem;
+            border-right: 3px solid #{$ak_headline_color_1};
+            @include media-breakpoint-down(md) {
+                display: none;
+            }
+        }
+        &_left{
+            margin-top: 3rem;
+            height: 100%;
+            border-radius: 1rem;
+            color: $primary;
+            background-color: $secondary;
+            @include media-breakpoint-down(xxl) {
+                margin-right: 1rem 0rem;
+            }
+            @include media-breakpoint-down(xl) {
+                margin: auto 0rem;
+            }
+            @include media-breakpoint-down(sm) {
+                margin: 0rem;
+            }
+        }
+        @include media-breakpoint-down(md) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// !  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  Services  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+.pg2_services {
+    padding-top: 5rem;
+    &_header_left{
+        border-right: 0.1rem solid #00ffc8;
+        @include media-breakpoint-down(md) {
+            border-right: none;
+        }
+    }
+    &_rows{
+        position: relative;
+        padding: 1rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include media-breakpoint-down(md) {
+            text-align: center;
+        }
+        &_content {
+            padding: 1rem;
+            div {
+                font-size: 1.5rem;
+                color:$ak_icon_color_3;
+                @include media-breakpoint-up(lg) {
+                    font-size: 2.5rem;
+                }
+            }
+            h3 {
+                padding-top: 1rem;
+                color: $ak_icon_color_3;
+            }
+            p {
+                font-size: 0.8rem;
+                @include media-breakpoint-up(lg) {
+                    font-size: 1rem;
+                }
+            }
+            @include media-breakpoint-up(lg) {
+                margin-top: 5rem;
+            }
+        }
+        &_pic {
+            img {
+                max-width: 100%;
+            }
+            @include media-breakpoint-down(md) {
+                margin-bottom: 4rem;
+            }
+        }
+    }
+    .second_service{
+        @include media-breakpoint-down(md) {
+            flex-direction: column-reverse;
+        }
+    }
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// !  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  FAQ  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+.pg2_faq{
+    padding-top: 5rem;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// !  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  Projects  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+.pg2_projects {
+    padding-top: 5rem;
+    button {
+        text-transform: capitalize;
+    }
+    &_box {
+        position: relative;
+        width: 100%;
+        height: 18.5rem;
+        overflow: hidden;
+        margin-bottom: 1.2rem;
+        border-top: 0.5rem  solid lighten($danger, 20%);
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        &_info {
+            background-color: rgba($danger, 0.75);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            visibility: hidden;
+            .caption {
+            text-align: center;
+            color: white;
+            @include ak_center_transform;
+                h4 {
+                    text-transform: uppercase;
+                    display: block;
+                }
+            }
+        }
+        &:hover {
+            img {
+                transform: scale(1.5);
+                @include ak_transition_1;
+            }
+            .pg2_projects_box_info {
+                opacity: 1;
+                visibility: visible;
+                @include ak_transition_1;
+            }
+        }
+    }
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// !  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  Testimonials  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+.pg2_testimonials {
+    position: relative;
+    padding: 2rem;
+    padding-top: 5rem;
+    @include ak_gradient_1;
+    &_comment {
+        background-color: rgba(white, 0.8);
+        padding: 2rem 1.25rem;
+        border-radius: 0.625rem;
+        height: auto;
+        text-align: center;
+        i {
+            font-size: 1.5rem;
+            color: rgba($primary, 0.7);
+        }
+        .ratings {
+            i {
+                color: rgba($primary, 0.7);
+                font-size: 1rem;
+            }
+        }
+    }
+    &_picture {
+        width: 6rem;
+        height: 6rem;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        img {
+            border: 0.325rem solid rgba($primary, 0.7);
+        }
+    }
+    &_name{
+        padding-top: 3rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        font-weight: bold;
+        color: white;
+        h3 {
+            padding-top: 0.8rem;
+            text-transform: capitalize;
+        }
+        p {
+            padding-bottom: 2rem;
+            text-transform: capitalize;
+        }
+    }
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// !  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  Contact  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+.pg2_gt {
+    padding-top: 5rem;
+    &_left {
+        &_info{
+            padding: 3rem;
+            margin: 1rem 0;
+            &_list {
+                position: relative;
+                list-style-type: none;
+                display: block;
+                padding-top: 0.5rem;
+                padding-left: 0.5rem;
+                margin-bottom: 0.7rem;
+                li::before {
+                    font-family: "Font Awesome 5 Free";
+                    content: "\f00c";
+                    font-weight: 600;
+                    margin-right: 0.5rem;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+    &_right {
+        .form{
+            padding: 3rem;
+            button {
+                border: none;
+                color: white;
+                text-transform: capitalize;
+                a {
+                    color: white;
+                    text-decoration: none;
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// !  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  Contact  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

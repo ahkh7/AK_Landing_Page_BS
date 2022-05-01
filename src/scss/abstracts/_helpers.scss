@@ -1,0 +1,84 @@
+
+@use "../vendors/__vendors-dir" as *;
+@use "../abstracts/variables"  as *;
+@use "../abstracts/mixins"  as *;
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// !  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  My classes  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////// -->
+//  *____________ Space between sections ____________ 
+ ///////////////////////////////////////// -->
+.ak_sections_space{
+    display: block;
+    padding: 4rem;
+    @include media-breakpoint-down(xl) {
+        padding: 4.5rem;
+    }
+    @include media-breakpoint-down(md) {
+        padding: 2.5rem;
+    }
+}
+///////////////////////////////////////// -->
+//  *____________ links ____________ 
+ ///////////////////////////////////////// -->
+.ak_links_1{
+    a{
+        color: $ak_links_color_1;
+        &:hover{
+            color: $ak_links_hover_1;
+            text-decoration: none;
+        }
+    }
+}
+///////////////////////////////////////// -->
+//  *____________  Border ____________ 
+///////////////////////////////////////// -->
+.ak_border_1 {
+    border: 0.1rem  ;
+    border-radius: 0.8rem;
+}
+.ak_border_2 {
+    border: 0.1rem solid #{$ak_btn_border_1};
+    border-radius: 0.8rem;
+}
+.ak_section_border_1{
+    background-color: $ak_bg_transparency_1;
+    border-radius: 2rem;
+    border: 0.1rem solid rgba(255, 255, 255, 0.527);
+}
+.ak_section_border_2{
+    background-color: $ak_bg_transparency_2;
+    border-radius: 2rem;
+    border: 0.1rem solid rgba(255, 255, 255, 0.527);
+}
+// ?__________________ btns __________________
+.ak_btns_border_1{
+    border: 0.1rem solid #{$ak_btn_border_1};
+    border-radius: 0.8rem;
+}
+
+.ak_btns_border_2{
+    border: 0.1rem solid #{$ak_btn_border_2};
+    border-radius: 0.8rem;
+}
+// ?__________________ text __________________
+
+.ak_text_bg_border_1{
+    border-radius: 0.8rem;
+    background-color: $ak_text_bg_color_2;
+    padding: 0.5rem 1rem;
+    margin: 0.25rem;
+}
+
+.ak_form_border_1{
+    border: 0.1rem solid #{white};
+    border-radius: 0.8rem;
+    background-color: $ak_bg_transparency_1;
+}
+///////////////////////////////////////// -->
+//  *____________  Head Lines ____________ 
+///////////////////////////////////////// -->
+.heading_line{
+    @include ak_headline_1($ak_headline_color_1);
+}

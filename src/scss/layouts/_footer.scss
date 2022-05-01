@@ -1,0 +1,156 @@
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// !  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  Use  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@use "../vendors/__vendors-dir" as *;
+@use "../abstracts/__abstracts-dir"  as *;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// !  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  Footer  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+.footer {
+    padding-top: 1rem;
+    background-color: $ak_footer_color_1;
+    &_contact{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        @include media-breakpoint-down(md) {
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        &_box{
+            position: relative;
+            margin: 1rem;
+            &_icon {
+                margin:0 0.5rem;
+                width: 4rem;
+                stroke: $ak_icon_color_3; 
+                @include media-breakpoint-down(lg) {
+                width: 3rem;
+                }
+                @include media-breakpoint-down(sm) {
+                width: 2rem;
+                }
+            }
+            &_info {
+                a {
+                    color: $ak_text_color_1;
+                    text-decoration: none;
+                    font-size: 1.4rem;
+                    &:hover{
+                        color:$ak_text_color_1;
+                    }
+                    @include media-breakpoint-down(lg) {
+                        font-size: 1.2rem;
+                    }
+                    @include media-breakpoint-down(sm) {
+                        font-size: 1rem;
+                    }
+                }
+                p {
+                    font-size: 1rem;
+                    color: $ak_text_color_3;
+                    text-decoration: none;
+                    @include media-breakpoint-down(lg) {
+                        font-size: 0.9rem;
+                    }
+                    @include media-breakpoint-up(sm) {
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+    }
+    .footer_sm {
+        color: white;
+        background-color: $ak_footer_color_2;
+        &_follow{
+            display: flex;
+            flex-direction: row;
+            font-size: 1.1rem;
+            @include media-breakpoint-down(sm) {
+                flex-direction: column;
+                font-size: 0.9rem;
+            }
+            a {
+                color: $ak_text_color_1;
+                i {
+                    color: white;
+                    font-size: 1.6rem;
+                    margin-left: 1rem;
+                    &:hover{
+                        color: $ak_icon_color_3;
+                    }
+                    @include media-breakpoint-down(sm) {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+    .campany_content{
+        h5{
+            margin-top: 1.5rem;
+            margin-bottom: 0;
+        }
+        hr{
+            background-color: $ak_headline_color_2;
+            width: 60px;
+            height: 2px;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+        }
+        p{
+            padding: 0 1rem;
+            @include media-breakpoint-down(sm) {
+                padding: 0 2rem;
+            }
+        }
+        @media (max-width:365px) {
+            display: flex;
+            flex-direction: column;
+        }
+        &_list {
+            @include media-breakpoint-down(lg) {
+                padding: 0;
+            }
+            @include media-breakpoint-down(sm) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-size: 0.9rem;
+            }
+            li {
+                margin-bottom: 0.5rem;
+                a {
+                    color: $ak_text_color_1;
+                    text-decoration: none;
+                    &:hover{
+                        text-decoration:underline ;
+                    }
+                }
+            }
+        }
+    }
+    .footer_bottom {
+        background-color: black;
+        &_copyright {
+            color: white;
+            text-align: center;
+            font-size: 0.65rem;
+            a {
+                margin: 0.5rem;
+                @include ak_links_1(white,white);
+                color: white;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+
+
